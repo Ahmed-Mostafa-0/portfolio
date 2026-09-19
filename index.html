@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Ahmed Mostafa Mahmoud | Quality and Food Safety Portfolio</title>
+<meta name="description" content="Junior Quality Engineer focused on quality control, quality assurance and food safety. HACCP, ISO 22000, ISO 9001, PRPs and TQM case studies.">
+<meta name="theme-color" content="#0E2236">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ahmed Mostafa Mahmoud | Quality and Food Safety Portfolio">
+<meta property="og:description" content="Junior Quality Engineer. HACCP, ISO 22000, ISO 9001, PRPs and TQM case studies.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%85%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F6F8; --surface:#FFFFFF; --surface-2:#E9EFF5; --text:#18232F; --muted:#526173; --line:#D3DCE5;
+  --navy:#0E2236; --navy-2:#17395A; --gold:#A87A1F; --gold-hi:#DDB65F;
+  --ccp:#B3322A; --ccp-bg:#F8E4E2; --link:#17539A;
+  --hero-text:#FFFFFF; --hero-muted:#B7C5D5; --hero-line:#3A5673;
+  --serif:"Lora","Georgia","Times New Roman",serif;
+  --sans:"Lato","Carlito","Calibri","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0A1521; --surface:#101F31; --surface-2:#162A40; --text:#E4EAF1; --muted:#9BABBD; --line:#26394E;
+    --gold:#DDB65F; --ccp:#F2857B; --ccp-bg:#3B1E20; --link:#8DB8F0;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0A1521; --surface:#101F31; --surface-2:#162A40; --text:#E4EAF1; --muted:#9BABBD; --line:#26394E;
+  --gold:#DDB65F; --ccp:#F2857B; --ccp-bg:#3B1E20; --link:#8DB8F0;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0}
+p{margin:0 0 1rem}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--gold-hi);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+section[id],article[id]{scroll-margin-top:64px}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:10;background:var(--navy);border-bottom:1px solid var(--hero-line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:52px}
+.brand{font-family:var(--serif);font-weight:600;color:#fff;text-decoration:none;white-space:nowrap}
+.bar nav{display:flex;gap:1.1rem;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.bar nav::-webkit-scrollbar{display:none}
+.bar nav a{color:var(--hero-muted);text-decoration:none;font-size:.95rem;padding:.5rem 0}
+.bar nav a:hover{color:#fff}
+
+/* hero */
+.hero{background:linear-gradient(165deg,var(--navy) 0%,var(--navy-2) 100%);color:var(--hero-text);padding:3.5rem 0 3rem}
+.hero h1{font-size:clamp(2.4rem,7.2vw,4.3rem);letter-spacing:-.01em;max-width:14ch}
+.hero .role{font-size:1.25rem;font-weight:700;margin:1.1rem 0 .15rem}
+.hero .focus{color:var(--hero-muted);margin:0 0 1.4rem}
+.hero .lede{max-width:58ch;font-size:1.08rem;margin:0 0 1.4rem;color:#E3EBF3}
+.hero .rule{width:56px;height:3px;background:var(--gold-hi);border:0;margin:1.4rem 0}
+.links{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-block;padding:.6rem 1.1rem;border-radius:6px;font-weight:700;text-decoration:none;font-size:.98rem;border:1.5px solid var(--gold-hi);color:#fff}
+.btn.solid{background:var(--gold-hi);color:var(--navy)}
+.btn:hover{filter:brightness(1.08)}
+
+/* the process line */
+.lineblock{margin-top:2.6rem}
+.lineblock h2{font-size:1.25rem;color:#fff}
+.hint{color:var(--hero-muted);font-size:.95rem;margin:.35rem 0 1.2rem}
+.line{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.line li{position:relative}
+.line li + li::before{content:"";position:absolute;top:13px;right:50%;width:100%;height:2px;background:var(--hero-line);z-index:0}
+.node{position:relative;z-index:1;display:block;width:100%;background:none;border:0;font:inherit;color:var(--hero-muted);padding:32px 4px 10px;text-align:center;line-height:1.25;font-size:.95rem}
+button.node{cursor:pointer;color:#DCE6F0;border-radius:8px}
+button.node:hover{color:#fff}
+.node::before{content:"";position:absolute;top:5px;left:50%;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--navy);border:2px solid #6C88A4}
+button.node::before{background:#DCE6F0;border-color:#DCE6F0}
+.node.is-ccp::before{background:#F0786D;border-color:#F0786D}
+.node[aria-pressed="true"]{color:#fff;font-weight:700}
+.node[aria-pressed="true"]::before{box-shadow:0 0 0 3px var(--navy),0 0 0 5px var(--gold-hi)}
+.tag{display:block;margin-top:2px;font-size:.78rem;font-weight:900;letter-spacing:.02em;color:#FF9A90}
+
+.panel{margin-top:1.2rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:1.2rem 1.3rem}
+.panel h3{font-size:1.3rem;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem}
+.panel .sub{color:var(--hero-muted);margin:.2rem 0 1rem;font-size:.97rem}
+.panel .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem 2rem}
+.panel dt{font-weight:700;color:var(--gold-hi);font-size:.92rem}
+.panel dd{margin:0 0 .1rem;color:#EAF0F6}
+.panel .hz{margin:0 0 .9rem;padding:0;list-style:none}
+.panel .hz li{padding:.6rem 0;border-top:1px solid rgba(255,255,255,.14)}
+.panel .hz li:first-child{border-top:0;padding-top:0}
+.panel .hz b{display:block}
+.badge{display:inline-block;font-family:var(--sans);font-size:.8rem;font-weight:900;padding:.1rem .5rem;border-radius:4px;background:var(--ccp-bg);color:var(--ccp);border:1px solid var(--ccp)}
+.panel .badge{background:#3B1E20;color:#FF9A90;border-color:#FF9A90}
+
+/* sections */
+main section.block{padding:3.4rem 0 .5rem}
+h2.sec{font-size:clamp(1.7rem,4.4vw,2.2rem);margin-bottom:1.3rem;padding-top:.8rem;border-top:3px solid var(--gold);display:inline-block;padding-right:2.2rem}
+.two{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:2.5rem}
+.two p{max-width:64ch}
+.facts{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.2rem 1.3rem;align-self:start}
+.facts h3{font-size:1.05rem;margin-bottom:.2rem}
+.facts p{color:var(--muted);margin:0 0 1rem;font-size:.97rem}
+.facts p:last-child{margin-bottom:0}
+.facts b{color:var(--text)}
+
+.intro{max-width:66ch;color:var(--muted)}
+.project{padding:2.2rem 0;border-top:1px solid var(--line)}
+.project:first-of-type{border-top:0}
+.pno{color:var(--muted);font-size:.92rem;margin:0 0 .25rem;font-weight:700}
+.project h3{font-size:clamp(1.35rem,3.6vw,1.75rem);margin-bottom:.6rem}
+.project .lead{max-width:66ch}
+.project h4{font-family:var(--sans);font-weight:900;font-size:1.02rem;margin:1.7rem 0 .55rem}
+.scope{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;margin:.3rem 0 0;padding:0}
+.scope li{border:1px solid var(--line);background:var(--surface);border-radius:4px;padding:.15rem .6rem;font-size:.93rem}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.96rem}
+th,td{text-align:left;vertical-align:top;padding:.65rem .85rem;border-bottom:1px solid var(--line)}
+th{background:var(--surface-2);font-weight:900;font-size:.92rem}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700}
+.note{color:var(--muted);font-size:.93rem;margin:.7rem 0 0;max-width:70ch}
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.cols3 > div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem}
+.cols3 b{display:block;margin-bottom:.15rem}
+.cols3 span{color:var(--muted);font-size:.95rem}
+.flow{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.55rem 1.4rem}
+.flow li{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:.45rem .8rem;font-weight:700;font-size:.95rem}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-1.05rem;top:50%;width:.7rem;height:.7rem;margin-top:-.35rem;border-top:2px solid var(--gold);border-right:2px solid var(--gold);transform:rotate(45deg) scale(.8)}
+.bul{margin:.4rem 0 0;padding-left:1.15rem;max-width:66ch}
+.bul li{margin:.2rem 0}
+.tw + .bul,.flow + .bul{margin-top:.9rem}
+.records{color:var(--muted);max-width:66ch;margin:.9rem 0 0;font-size:.97rem}
+
+/* skills + credentials */
+.rows{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.rows > div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:1rem;padding:.85rem 1.2rem;border-top:1px solid var(--line)}
+.rows > div:first-child{border-top:0}
+.rows dt{font-weight:900}
+.rows dd{margin:0}
+.rows .muted{color:var(--muted)}
+.subsec{font-size:1.3rem;margin:2rem 0 .8rem}
+.rows .bul{margin-top:.2rem}
+.rows .bul li{margin:.1rem 0}
+
+/* contact */
+.contact{margin:3.4rem 0 0;padding:2.6rem 0 3rem;background:linear-gradient(165deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff}
+.contact h2{font-size:clamp(1.6rem,4.4vw,2.1rem);margin-bottom:.6rem}
+.contact p{color:#DCE6F0;max-width:60ch}
+footer{background:var(--navy);color:var(--hero-muted);font-size:.9rem;padding:1.2rem 0}
+footer p{margin:0;max-width:80ch}
+
+.print-only{display:none}
+
+/* small screens: the process line runs vertically */
+@media (max-width:640px){
+  body{font-size:16.5px}
+  .hero{padding:2.4rem 0 2.2rem}
+  .line{grid-template-columns:1fr}
+  .line li + li::before{top:-50%;bottom:auto;right:auto;left:15px;width:2px;height:100%}
+  .node{padding:13px 8px 13px 44px;text-align:left;min-height:48px;display:flex;align-items:center;gap:.6rem}
+  .node::before{top:50%;left:8px;margin:-8px 0 0}
+  .tag{display:inline-block;margin:0}
+  .panel .grid{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr;gap:1.6rem}
+  .cols3{grid-template-columns:1fr}
+  .rows > div{grid-template-columns:1fr;gap:.15rem}
+  .flow{gap:.55rem 1.3rem}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+
+/* print / PDF */
+@media print{
+  @page{size:A4;margin:12mm}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html{scroll-behavior:auto}
+  body{background:#fff;color:#18232F;font-size:10pt;line-height:1.5}
+  .wrap{padding:0}
+  .top,.hint,#panel,.no-print{display:none !important}
+  .print-only{display:block;margin-top:.6rem;color:#DCE6F0;font-size:10pt}
+  .contact .links{display:none}
+  .hero{border-radius:10px;padding:1.6rem 1.6rem 1.3rem}
+  .hero h1{font-size:34pt}
+  .lineblock{margin-top:1.4rem}
+  .lineblock h2{font-size:12pt}
+  .line li + li::before{top:13px}
+  main section.block{padding:1.6rem 0 0}
+  h2.sec{font-size:17pt;margin-bottom:.7rem}
+  h2,h3,h4,.pno{break-after:avoid}
+  .tw,.flow,.cols3,.facts,.rows > div,.panel{break-inside:avoid}
+  tr{break-inside:avoid}
+  .project{padding:.9rem 0}
+  .project h3{font-size:15pt;margin-bottom:.35rem}
+  .project h4{margin:1rem 0 .4rem}
+  table{font-size:9pt}
+  th,td{padding:.38rem .7rem}
+  .pno{font-size:8.5pt}
+  .project .lead{margin-bottom:.6rem}
+  .cols3 > div{padding:.6rem .8rem}
+  #projects{break-before:page}
+  .project:not(#p1),.keep{break-inside:avoid}
+  #skills .wrap,#credentials .wrap,#experience .wrap{break-inside:avoid}
+  .contact{margin-top:1.6rem;padding:1.4rem 1.6rem;border-radius:10px}
+  footer{background:none;color:#526173;padding:.8rem 0 0;border-top:1px solid #D3DCE5;margin-top:1rem}
+  a{color:inherit;text-decoration:none}
+  table{min-width:0}
+  .tw{overflow:visible}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top">Ahmed Mostafa</a>
+    <nav aria-label="Sections">
+      <a href="#profile">Profile</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="name">
+  <div class="wrap">
+    <h1 id="name">Ahmed Mostafa Mahmoud</h1>
+    <p class="role">Junior Quality Engineer</p>
+    <p class="focus">Quality Control, Quality Assurance and Food Safety. Minya, Egypt.</p>
+    <p class="lede">I turn HACCP, ISO 22000 and ISO 9001 requirements into process controls, records and corrective actions. My case studies apply them to a tomato sauce line, step by step.</p>
+    <div class="links no-print-empty" id="hero-links" hidden></div>
+
+    <div class="lineblock">
+      <h2>The line I studied: tomato sauce manufacturing and packaging</h2>
+      <p class="hint">Tap a highlighted step to see how its hazards are controlled. Steps marked CCP are critical control points.</p>
+      <ol class="line" id="line" aria-label="Tomato sauce process flow"></ol>
+      <div class="panel" id="panel" role="region" aria-live="polite" aria-label="Step details"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="profile" aria-labelledby="h-profile">
+  <div class="wrap">
+    <h2 class="sec" id="h-profile">Profile</h2>
+    <div class="two">
+      <div>
+        <p>I am a Junior Quality Engineer focused on quality control, quality assurance and food safety. I apply TQM, ISO 9001, ISO 22000, HACCP, PRPs and GMP/GHP to real food manufacturing processes: hazard analysis, CCP identification, monitoring, corrective actions, verification, traceability and continual improvement.</p>
+        <p>Agriculture (Horticulture) graduate with a strong focus on Quality Management, Food Safety and Quality Assurance. My goal is to gain strong hands-on experience and help keep product quality, food safety and quality management systems effective.</p>
+      </div>
+      <aside class="facts" aria-label="Education and activities">
+        <h3>Education</h3>
+        <p><b>Agriculture (Horticulture)</b><br>Minya University. Graduated with Very Good.</p>
+        <h3>Activities</h3>
+        <p><b>Member, Logistics Committee</b><br>FA Module, Minya University.</p>
+        <h3>Looking for</h3>
+        <p><b>Entry-level QC Engineer, QA Engineer or Food Safety roles</b> in food manufacturing.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="projects" aria-labelledby="h-projects">
+  <div class="wrap">
+    <h2 class="sec" id="h-projects">Case-study projects</h2>
+    <p class="intro">Each project turns a quality or food safety requirement into controls, records, analysis and improvement actions. They are training case studies, not records from a working plant.</p>
+
+    <!-- Project 1 -->
+    <article class="project" id="p1">
+      <p class="pno">Project 1</p>
+      <h3>Tomato sauce HACCP and ISO 22000 case study</h3>
+      <p class="lead">A food safety system for a tomato sauce manufacturing and packaging process, built on HACCP and ISO 22000 principles. It covers hazards, preventive controls, critical control points, monitoring, corrective action and verification.</p>
+      <ul class="scope" aria-label="Scope">
+        <li>Raw material receiving</li><li>Processing and preparation</li><li>Cooking and heat treatment</li><li>Filling</li><li>Packaging</li><li>Finished product storage</li>
+      </ul>
+
+      <div class="keep">
+      <h4>Hazard analysis</h4>
+      <div class="tw"><table>
+        <thead><tr><th>Process step</th><th>Hazard</th><th>Type</th><th>Control measure</th><th>Significant</th></tr></thead>
+        <tbody>
+          <tr><td>Receiving</td><td>Pathogenic microorganisms</td><td>Biological</td><td>Approved suppliers and inspection</td><td>Yes</td></tr>
+          <tr><td>Receiving</td><td>Pesticide residues</td><td>Chemical</td><td>Supplier control and specifications</td><td>Yes</td></tr>
+          <tr><td>Processing</td><td>Survival of microorganisms</td><td>Biological</td><td>Controlled heat treatment</td><td>Yes</td></tr>
+          <tr><td>Filling</td><td>Recontamination</td><td>Biological</td><td>Hygienic filling conditions</td><td>Yes</td></tr>
+          <tr><td>Packaging</td><td>Foreign body</td><td>Physical</td><td>Packaging inspection</td><td>Yes</td></tr>
+        </tbody>
+      </table></div>
+      <ul class="bul">
+        <li>Identify biological, chemical and physical hazards at each step.</li>
+        <li>Assess significance with the selected risk assessment approach.</li>
+        <li>Define preventive or control measures.</li>
+        <li>Document the rationale for hazards that need further control.</li>
+      </ul>
+      </div>
+
+      <div class="keep">
+      <h4>Critical control points</h4>
+      <p class="lead">A documented decision process decides whether a step needs control as a CCP. It weighs the hazard, the control measure, how likely the hazard is, and whether control is essential at that step.</p>
+      <div class="tw"><table>
+        <thead><tr><th>CCP</th><th>Hazard</th><th>Critical limit</th><th>Monitoring</th><th>Corrective action</th></tr></thead>
+        <tbody>
+          <tr><td>Cooking <span class="badge">CCP</span></td><td>Microbial survival</td><td>Validated time/temperature limit defined for the process</td><td>Temperature and time</td><td>Stop the process and evaluate the product</td></tr>
+          <tr><td>Filling <span class="badge">CCP</span></td><td>Recontamination</td><td>Validated hygienic limits defined for the filling operation</td><td>Periodic monitoring</td><td>Correct the condition and assess the product</td></tr>
+        </tbody>
+      </table></div>
+      <p class="note">No numeric limits are stated here. They must be validated against the product, the process, legal requirements, scientific references and site-specific data.</p>
+      </div>
+
+      <div class="keep">
+      <h4>Control cycle</h4>
+      <ol class="flow" aria-label="Control cycle">
+        <li>Define critical limit</li><li>Monitor and record</li><li>Identify deviation</li><li>Correct and control product</li><li>Verify</li>
+      </ol>
+      <div class="cols3" style="margin-top:1rem">
+        <div><b>Monitoring</b><span>What is measured, how, when and by whom. Records give objective evidence of control.</span></div>
+        <div><b>Corrective action</b><span>Identify the deviation, control the affected product, restore the process, find the cause and document what was done.</span></div>
+        <div><b>Verification</b><span>Review records, confirm monitoring took place, check equipment calibration where it applies, and review how well the controls work.</span></div>
+      </div>
+      </div>
+
+      <div class="keep">
+      <h4>Traceability</h4>
+      <ol class="flow" aria-label="Traceability flow">
+        <li>Supplier</li><li>Raw material lot</li><li>Production date</li><li>Production batch</li><li>Packaging</li><li>Finished product</li><li>Customer</li>
+      </ol>
+      <ul class="bul">
+        <li>Track raw materials and finished products by lot.</li>
+        <li>Link production records to specific lots and batches.</li>
+        <li>Support complaint and nonconformity investigations, and targeted withdrawal or recall.</li>
+        <li>Cover one step back and one step forward, with defined records and responsibilities.</li>
+      </ul>
+      </div>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="project" id="p2">
+      <p class="pno">Project 2</p>
+      <h3>ISO 22000:2018 food safety management system</h3>
+      <p class="lead">A case study organized around the structure of ISO 22000:2018, from organizational context through to improvement.</p>
+      <div class="tw"><table>
+        <thead><tr><th>Clause</th><th>Focus</th><th>Applied to</th></tr></thead>
+        <tbody>
+          <tr><td>4 Context of the organization</td><td>Internal and external issues</td><td>Organizational context and interested parties</td></tr>
+          <tr><td>5 Leadership</td><td>Commitment and roles</td><td>Food safety policy and responsibilities</td></tr>
+          <tr><td>6 Planning</td><td>Risk and objectives</td><td>Risks and opportunities, objectives and planning</td></tr>
+          <tr><td>7 Support</td><td>Resources and information</td><td>Resources and documented information</td></tr>
+          <tr><td>8 Operation</td><td>Operational control</td><td>PRPs and hazard control</td></tr>
+          <tr><td>9 Performance evaluation</td><td>Checking results</td><td>Monitoring, analysis and verification</td></tr>
+          <tr><td>10 Improvement</td><td>Acting on findings</td><td>Continual improvement of the system</td></tr>
+        </tbody>
+      </table></div>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="project" id="p3">
+      <p class="pno">Project 3</p>
+      <h3>PRPs cleaning and sanitation system</h3>
+      <p class="lead">A structured sanitation program that sets cleaning methods, chemical controls, frequencies, responsibilities and verification, to keep hygienic conditions under control.</p>
+      <div class="tw"><table>
+        <thead><tr><th>Item</th><th>Requirement</th></tr></thead>
+        <tbody>
+          <tr><td>Area</td><td>Processing area</td></tr>
+          <tr><td>Cleaning type</td><td>Wet cleaning</td></tr>
+          <tr><td>Chemical</td><td>Approved detergent and disinfectant</td></tr>
+          <tr><td>Concentration</td><td>Defined specification</td></tr>
+          <tr><td>Frequency</td><td>Daily, or as defined by risk</td></tr>
+          <tr><td>Performed by</td><td>Sanitation operator</td></tr>
+          <tr><td>Checked by</td><td>Quality or supervisor</td></tr>
+          <tr><td>Verification</td><td>Inspection, and swab testing where applicable</td></tr>
+        </tbody>
+      </table></div>
+    </article>
+
+    <!-- Project 4 -->
+    <article class="project" id="p4">
+      <p class="pno">Project 4</p>
+      <h3>ISO 9001:2015 quality management system</h3>
+      <p class="lead">Practical application of ISO 9001:2015 requirements across clauses 4 to 10.</p>
+      <div class="tw"><table>
+        <thead><tr><th>Clause</th><th>Focus</th><th>Practical example</th></tr></thead>
+        <tbody>
+          <tr><td>4</td><td>Context of the organization</td><td>Identify internal and external issues and interested parties.</td></tr>
+          <tr><td>5</td><td>Leadership</td><td>Quality policy, roles, responsibilities and leadership commitment.</td></tr>
+          <tr><td>6</td><td>Planning</td><td>Risks, opportunities, objectives and planned changes.</td></tr>
+          <tr><td>7</td><td>Support</td><td>Resources, competence, awareness, communication and documented information.</td></tr>
+          <tr><td>8</td><td>Operation</td><td>Operational planning, product and service requirements, process controls.</td></tr>
+          <tr><td>9</td><td>Performance evaluation</td><td>Monitoring, measurement, internal audit and management review.</td></tr>
+          <tr><td>10</td><td>Improvement</td><td>Nonconformity, corrective action and continual improvement.</td></tr>
+        </tbody>
+      </table></div>
+      <p class="records">Records produced: risk assessment, quality objectives, document control, internal audit, nonconformity, CAPA and continual improvement.</p>
+    </article>
+
+    <!-- Project 5 -->
+    <article class="project" id="p5">
+      <p class="pno">Project 5</p>
+      <h3>TQM quality improvement case study</h3>
+      <p class="lead">A structured problem-solving path that links TQM principles to data analysis, root-cause investigation, corrective action and process control.</p>
+      <div class="tw"><table>
+        <thead><tr><th>Step</th><th>Tool or stage</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Problem</td><td>Define the quality problem and its impact.</td></tr>
+          <tr><td>2</td><td>Data collection</td><td>Collect relevant process or defect data.</td></tr>
+          <tr><td>3</td><td>Pareto analysis</td><td>Find the most significant categories.</td></tr>
+          <tr><td>4</td><td>Fishbone analysis</td><td>Explore potential root causes.</td></tr>
+          <tr><td>5</td><td>Root cause</td><td>Confirm the causes that need action.</td></tr>
+          <tr><td>6</td><td>Corrective action</td><td>Implement actions and assign responsibility.</td></tr>
+          <tr><td>7</td><td>Control chart</td><td>Monitor process stability over time.</td></tr>
+          <tr><td>8</td><td>Results</td><td>Evaluate effectiveness and sustain the improvement.</td></tr>
+        </tbody>
+      </table></div>
+    </article>
+
+    <!-- Project 6 -->
+    <article class="project" id="p6">
+      <p class="pno">Project 6</p>
+      <h3>Emergency preparedness plan</h3>
+      <p class="lead">A response framework for events that can affect people, product or process control. It protects people, prevents contamination, controls affected product and restores safe operation.</p>
+      <div class="tw"><table>
+        <thead><tr><th>Emergency</th><th>Immediate action</th><th>Product control</th><th>Corrective action</th></tr></thead>
+        <tbody>
+          <tr><td>Fire</td><td>Evacuate and secure the area</td><td>Isolate affected product</td><td>Investigation</td></tr>
+          <tr><td>Power failure</td><td>Stop affected operations</td><td>Identify affected batches</td><td>Restore and verify</td></tr>
+          <tr><td>Chemical spill</td><td>Isolate the area</td><td>Prevent contamination</td><td>Clean and inspect</td></tr>
+          <tr><td>Foreign body</td><td>Stop the process</td><td>Hold affected product</td><td>Root cause analysis</td></tr>
+        </tbody>
+      </table></div>
+      <p class="note">Also planned for: cooling failure, gas or fuel leakage, equipment breakdown, pest infestation, flooding or drainage failure, glass breakage, utilities failure, suspected sabotage, and monitoring or control failure.</p>
+    </article>
+  </div>
+</section>
+
+<section class="block" id="experience" aria-labelledby="h-exp">
+  <div class="wrap">
+    <h2 class="sec" id="h-exp">Experience</h2>
+    <p class="intro">Agricultural production and field roles. The tasks listed under SEKEM carry over directly to quality work.</p>
+    <dl class="rows">
+      <div>
+        <dt>SEKEM</dt>
+        <dd><b>Agricultural Engineer for Production</b>
+          <p class="note" style="margin:.4rem 0 0">Transferable to quality work:</p>
+          <ul class="bul">
+            <li>Daily performance monitoring</li>
+            <li>Production records</li>
+            <li>Worker supervision</li>
+            <li>Task assignment</li>
+            <li>Daily reporting</li>
+            <li>Production tracking</li>
+          </ul>
+        </dd>
+      </div>
+      <div><dt>Modern Landscape, Marassi</dt><dd><b>Landscape Worker</b></dd></div>
+      <div><dt>El Mazloom Farm</dt><dd><b>Agricultural Training</b></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="block" id="skills" aria-labelledby="h-skills">
+  <div class="wrap">
+    <h2 class="sec" id="h-skills">Skills</h2>
+    <dl class="rows">
+      <div><dt>Quality management</dt><dd>TQM, ISO 9001, quality improvement, risk-based thinking, CAPA</dd></div>
+      <div><dt>Food safety</dt><dd>HACCP, ISO 22000, PRPs, GMP, GHP</dd></div>
+      <div><dt>Quality tools</dt><dd>Pareto analysis, fishbone diagram, 5 Why, control charts, root cause analysis</dd></div>
+      <div><dt>Documentation</dt><dd>SOPs, checklists, monitoring records, traceability, corrective action records</dd></div>
+      <div><dt>Software</dt><dd>Microsoft Excel, Word and PowerPoint</dd></div>
+      <div><dt>Professional</dt><dd>Communication, leadership, problem solving, continuous learning</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="block" id="credentials" aria-labelledby="h-cred">
+  <div class="wrap">
+    <h2 class="sec" id="h-cred">Certifications and training</h2>
+    <dl class="rows">
+      <div><dt>Food safety</dt><dd>ISO 22000, HACCP and PRPs<br><span class="muted">Egyptian Organization for Standardization and Quality</span></dd></div>
+      <div><dt>Total Quality Management</dt><dd>Mastering TQM: Apply, Evaluate and Improve Quality Systems<br><span class="muted">EDUCBA</span></dd></div>
+      <div><dt>Leadership</dt><dd>Leadership development training</dd></div>
+    </dl>
+    <h3 class="subsec">Applied learning</h3>
+    <dl class="rows">
+      <div><dt>ISO 9001:2015</dt><dd>Studied through an applied project (Project 4)<br><span class="muted">No formal certificate</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="h-contact">
+  <div class="wrap">
+    <h2 id="h-contact">Let's talk</h2>
+    <p>I am looking for an entry-level QC Engineer, QA Engineer or Food Safety role in food manufacturing. Minya, Egypt.</p>
+    <div class="links" id="contact-links" hidden></div>
+    <p class="print-only" id="contact-print"></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>These are selected case studies and learning outputs, developed to show an applied understanding of quality management and food safety principles.</p>
+  </div>
+</footer>
+
+<script>
+/* Contact details: fill these in and republish. Empty values hide the buttons. */
+var CONTACT = { email: "ahmedmostafa5370@gmail.com", linkedin: "https://www.linkedin.com/in/ahmed-mostafa-10a338342" };
+
+var STEPS = [
+  { id: "receiving", name: "Receiving", analysed: true, ccp: false,
+    hazards: [
+      { h: "Pathogenic microorganisms", t: "Biological", c: "Approved suppliers and inspection" },
+      { h: "Pesticide residues", t: "Chemical", c: "Supplier control and specifications" }
+    ] },
+  { id: "preparation", name: "Preparation", analysed: false },
+  { id: "processing", name: "Processing", analysed: true, ccp: false,
+    hazards: [ { h: "Survival of microorganisms", t: "Biological", c: "Controlled heat treatment" } ] },
+  { id: "cooking", name: "Cooking", analysed: true, ccp: true,
+    hazards: [ { h: "Microbial survival", t: "Biological", c: "Controlled heat treatment" } ],
+    limit: "Validated time/temperature limit defined for the process", monitor: "Temperature and time",
+    action: "Stop the process and evaluate the product",
+    verify: "Review records, confirm monitoring, check equipment calibration" },
+  { id: "filling", name: "Filling", analysed: true, ccp: true,
+    hazards: [ { h: "Recontamination", t: "Biological", c: "Hygienic filling conditions" } ],
+    limit: "Validated hygienic limits defined for the filling operation", monitor: "Periodic monitoring",
+    action: "Correct the condition and assess the product",
+    verify: "Review records, confirm monitoring, review control effectiveness" },
+  { id: "packaging", name: "Packaging", analysed: true, ccp: false,
+    hazards: [ { h: "Foreign body", t: "Physical", c: "Packaging inspection" } ] },
+  { id: "storage", name: "Storage", analysed: false }
+];
+
+function el(tag, cls, text) {
+  var n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text) n.textContent = text;
+  return n;
+}
+
+function showStep(id) {
+  var s = STEPS.filter(function (x) { return x.id === id; })[0];
+  var buttons = document.querySelectorAll("#line button.node");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].setAttribute("aria-pressed", buttons[i].getAttribute("data-id") === id ? "true" : "false");
+  }
+  var p = document.getElementById("panel");
+  p.textContent = "";
+  var h = el("h3", "", s.name);
+  if (s.ccp) h.appendChild(el("span", "badge", "CCP"));
+  p.appendChild(h);
+  p.appendChild(el("p", "sub", s.ccp
+    ? "Critical control point: this step is monitored against a critical limit."
+    : "Significant hazard, controlled by a preventive measure."));
+  var ul = el("ul", "hz");
+  s.hazards.forEach(function (x) {
+    var li = el("li");
+    li.appendChild(el("b", "", x.h + " (" + x.t.toLowerCase() + ")"));
+    li.appendChild(el("span", "", "Control: " + x.c));
+    ul.appendChild(li);
+  });
+  p.appendChild(ul);
+  if (s.ccp) {
+    var g = el("dl", "grid");
+    [["Critical limit", s.limit], ["Monitoring", s.monitor], ["Corrective action", s.action], ["Verification", s.verify]]
+      .forEach(function (r) {
+        var d = el("div");
+        d.appendChild(el("dt", "", r[0]));
+        d.appendChild(el("dd", "", r[1]));
+        g.appendChild(d);
+      });
+    p.appendChild(g);
+  }
+}
+
+(function build() {
+  var ol = document.getElementById("line");
+  STEPS.forEach(function (s) {
+    var li = document.createElement("li");
+    var n;
+    if (s.analysed) {
+      n = el("button", "node" + (s.ccp ? " is-ccp" : ""), s.name);
+      n.type = "button";
+      n.setAttribute("data-id", s.id);
+      n.setAttribute("aria-pressed", "false");
+      n.addEventListener("click", function () { showStep(s.id); });
+    } else {
+      n = el("span", "node", s.name);
+    }
+    if (s.ccp) n.appendChild(el("span", "tag", "CCP"));
+    li.appendChild(n);
+    ol.appendChild(li);
+  });
+  showStep("cooking");
+
+  function link(href, label, solid, external) {
+    var a = el("a", "btn" + (solid ? " solid" : ""), label);
+    a.href = href;
+    if (external) { a.target = "_blank"; a.rel = "noopener"; }
+    return a;
+  }
+  ["hero-links", "contact-links"].forEach(function (id) {
+    var box = document.getElementById(id);
+    var any = false;
+    if (CONTACT.email) { box.appendChild(link("mailto:" + CONTACT.email, "Email me", true, false)); any = true; }
+    if (CONTACT.linkedin) { box.appendChild(link(CONTACT.linkedin, "LinkedIn", !CONTACT.email, true)); any = true; }
+    if (any) box.hidden = false;
+  });
+  var pr = document.getElementById("contact-print");
+  [[CONTACT.email, "mailto:" + CONTACT.email], [CONTACT.linkedin.replace("https://www.", ""), CONTACT.linkedin]].forEach(function (r) {
+    if (!r[0]) return;
+    var a = el("a", "", r[0]); a.href = r[1];
+    var d = el("div"); d.appendChild(a); pr.appendChild(d);
+  });
+})();
+</script>
+</body>
+</html>
