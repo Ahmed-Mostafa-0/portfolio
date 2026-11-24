@@ -258,7 +258,7 @@ footer p{margin:0;max-width:80ch}
         <h3>Education</h3>
         <p><b>Agriculture (Horticulture)</b><br>Minya University. Graduated with Very Good.</p>
         <h3>Activities</h3>
-        <p><b>Member, Logistics Committee</b><br>FA Module, Minya University.</p>
+        <p><b>Member, Logistics Committee</b><br>FAO Model, Minya University. FAO Volunteer Award.</p>
         <h3>Looking for</h3>
         <p><b>Entry-level QC Engineer, QA Engineer or Food Safety roles</b> in food manufacturing.</p>
       </aside>
@@ -462,21 +462,40 @@ footer p{margin:0;max-width:80ch}
     <p class="intro">Agricultural production and field roles. The tasks listed under SEKEM carry over directly to quality work.</p>
     <dl class="rows">
       <div>
-        <dt>SEKEM</dt>
-        <dd><b>Agricultural Engineer for Production</b>
-          <p class="note" style="margin:.4rem 0 0">Transferable to quality work:</p>
+        <dt>SEKEM<br><span class="muted" style="font-weight:400">Minya</span></dt>
+        <dd><b>Agricultural Production Engineer</b><br><span class="muted">July 2026 &ndash; August 2026</span>
           <ul class="bul">
-            <li>Daily performance monitoring</li>
-            <li>Production records</li>
-            <li>Worker supervision</li>
-            <li>Task assignment</li>
-            <li>Daily reporting</li>
-            <li>Production tracking</li>
+            <li>Supervised 10&ndash;30 workers in medicinal and aromatic plant production</li>
+            <li>Set daily production targets and tracked output against them</li>
+            <li>Prepared daily production reports</li>
+            <li>Daily performance monitoring, production records, task assignment</li>
           </ul>
         </dd>
       </div>
-      <div><dt>Modern Landscape, Marassi</dt><dd><b>Landscape Worker</b></dd></div>
-      <div><dt>El Mazloom Farm</dt><dd><b>Agricultural Training</b></dd></div>
+      <div>
+        <dt>Modern Landscape Company<br><span class="muted" style="font-weight:400">Marassi, North Coast</span></dt>
+        <dd><b>Landscape Worker</b><br><span class="muted">August 2026 &ndash; September 2026</span>
+          <ul class="bul">
+            <li>Supported on-site execution of landscaping works</li>
+            <li>Distributed daily tasks and tracked materials</li>
+            <li>Kept the site organized and work running on schedule</li>
+          </ul>
+        </dd>
+      </div>
+      <div>
+        <dt>Al-Mazloum Farm<br><span class="muted" style="font-weight:400">Ismailia</span></dt>
+        <dd><b>Agricultural Engineer Trainee</b><br><span class="muted">July 2025 &ndash; August 2025</span></dd>
+      </div>
+      <div>
+        <dt>Faculty of Agriculture Nursery<br><span class="muted" style="font-weight:400">Minya University</span></dt>
+        <dd><b>Agricultural Trainee</b></dd>
+      </div>
+      <div>
+        <dt>FAO Model, Minya University<br><span class="muted" style="font-weight:400">Volunteer</span></dt>
+        <dd><b>Logistics Committee Member</b><br><span class="muted">2025 &ndash; 2026</span>
+          <p class="note" style="margin:.4rem 0 0">FAO Volunteer Award.</p>
+        </dd>
+      </div>
     </dl>
   </div>
 </section>
@@ -503,6 +522,8 @@ footer p{margin:0;max-width:80ch}
       <div><dt>FSSC 22000 V6</dt><dd>Food Safety Management System<br><span class="muted">Certificate of Completion, M3aarf</span></dd></div>
       <div><dt>Total Quality Management</dt><dd>Mastering TQM: Apply, Evaluate and Improve Quality Systems<br><span class="muted">EDUCBA</span></dd></div>
       <div><dt>Leadership</dt><dd>Leadership development training<br><span class="muted">University of Illinois Urbana-Champaign</span></dd></div>
+      <div><dt>McKinsey Forward</dt><dd>McKinsey Forward Program<br><span class="muted">Digital badge, Credly</span></dd></div>
+      <div><dt>Volunteer award</dt><dd>FAO Volunteer Award<br><span class="muted">FAO Model, Minya University, 2025&ndash;2026</span></dd></div>
     </dl>
     <h3 class="subsec">Training (self-study, no certificate)</h3>
     <dl class="rows">
@@ -521,7 +542,7 @@ footer p{margin:0;max-width:80ch}
 <section class="contact" id="contact" aria-labelledby="h-contact">
   <div class="wrap">
     <h2 id="h-contact">Let's talk</h2>
-    <p>I am looking for an entry-level QC Engineer, QA Engineer or Food Safety role in food manufacturing. Minya, Egypt.</p>
+    <p>I am looking for an entry-level QC Engineer, QA Engineer or Food Safety role in food manufacturing. Minya, Egypt.<br>Email: <a href="mailto:ahmedmostafa5370@gmail.com" style="color:#fff">ahmedmostafa5370@gmail.com</a> &middot; Phone: <a href="tel:+201152820340" style="color:#fff">+20 115 282 0340</a></p>
     <div class="links" id="contact-links" hidden></div>
     <p class="print-only" id="contact-print"></p>
   </div>
@@ -537,7 +558,7 @@ footer p{margin:0;max-width:80ch}
 
 <script>
 /* Contact details: fill these in and republish. Empty values hide the buttons. */
-var CONTACT = { email: "ahmedmostafa5370@gmail.com", linkedin: "https://www.linkedin.com/in/ahmed-mostafa-10a338342" };
+var CONTACT = { email: "ahmedmostafa5370@gmail.com", phone: "+201152820340", phoneDisplay: "+20 115 282 0340", linkedin: "https://www.linkedin.com/in/ahmed-mostafa-10a338342", cv: "Ahmed_Mostafa_Mahmoud_CV.pdf" };
 
 var STEPS = [
   { id: "receiving", name: "Receiving", analysed: true, ccp: false,
@@ -635,11 +656,13 @@ function showStep(id) {
     var box = document.getElementById(id);
     var any = false;
     if (CONTACT.email) { box.appendChild(link("mailto:" + CONTACT.email, "Email me", true, false)); any = true; }
+    if (CONTACT.phone) { box.appendChild(link("tel:" + CONTACT.phone, "Call me", false, false)); any = true; }
     if (CONTACT.linkedin) { box.appendChild(link(CONTACT.linkedin, "LinkedIn", !CONTACT.email, true)); any = true; }
+    if (CONTACT.cv) { box.appendChild(link(CONTACT.cv, "Download CV", false, true)); any = true; }
     if (any) box.hidden = false;
   });
   var pr = document.getElementById("contact-print");
-  [[CONTACT.email, "mailto:" + CONTACT.email], [CONTACT.linkedin.replace("https://www.", ""), CONTACT.linkedin]].forEach(function (r) {
+  [[CONTACT.email, "mailto:" + CONTACT.email], [CONTACT.phoneDisplay, "tel:" + CONTACT.phone], [CONTACT.linkedin.replace("https://www.", ""), CONTACT.linkedin]].forEach(function (r) {
     if (!r[0]) return;
     var a = el("a", "", r[0]); a.href = r[1];
     var d = el("div"); d.appendChild(a); pr.appendChild(d);
