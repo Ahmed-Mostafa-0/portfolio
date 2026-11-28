@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training Case Studies | Ahmed Mostafa Mahmoud</title>
+<meta name="description" content="Thirteen training case studies on one virtual poultry and meat plant: ISO 22000, HACCP, GMP/GHP, FSSC 22000, ISO 9001, TQM, NFSA law, traceability, food defence, audit, lab, allergens and supplier approval.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F6F8; --surface:#FFFFFF; --surface-2:#E9EFF5; --text:#18232F; --muted:#526173; --line:#D3DCE5;
+  --navy:#0E2236; --navy-2:#17395A; --gold:#A87A1F; --gold-hi:#DDB65F;
+  --ccp:#B3322A; --ccp-bg:#F8E4E2; --link:#17539A;
+  --hero-text:#FFFFFF; --hero-muted:#B7C5D5; --hero-line:#3A5673;
+  --serif:"Lora","Georgia","Times New Roman",serif;
+  --sans:"Lato","Carlito","Calibri","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0A1521; --surface:#101F31; --surface-2:#162A40; --text:#E4EAF1; --muted:#9BABBD; --line:#26394E;
+    --gold:#DDB65F; --ccp:#F2857B; --ccp-bg:#3B1E20; --link:#8DB8F0;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0A1521; --surface:#101F31; --surface-2:#162A40; --text:#E4EAF1; --muted:#9BABBD; --line:#26394E;
+  --gold:#DDB65F; --ccp:#F2857B; --ccp-bg:#3B1E20; --link:#8DB8F0;
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0}
+p{margin:0 0 1rem}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--gold-hi);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+section[id],article[id]{scroll-margin-top:64px}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:10;background:var(--navy);border-bottom:1px solid var(--hero-line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:52px}
+.brand{font-family:var(--serif);font-weight:600;color:#fff;text-decoration:none;white-space:nowrap}
+.bar nav{display:flex;gap:1.1rem;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.bar nav::-webkit-scrollbar{display:none}
+.bar nav a{color:var(--hero-muted);text-decoration:none;font-size:.95rem;padding:.5rem 0}
+.bar nav a:hover{color:#fff}
+
+/* hero */
+.hero{background:linear-gradient(165deg,var(--navy) 0%,var(--navy-2) 100%);color:var(--hero-text);padding:3.5rem 0 3rem}
+.hero h1{font-size:clamp(2.4rem,7.2vw,4.3rem);letter-spacing:-.01em;max-width:14ch}
+.hero .role{font-size:1.25rem;font-weight:700;margin:1.1rem 0 .15rem}
+.hero .focus{color:var(--hero-muted);margin:0 0 1.4rem}
+.hero .lede{max-width:58ch;font-size:1.08rem;margin:0 0 1.4rem;color:#E3EBF3}
+.hero .rule{width:56px;height:3px;background:var(--gold-hi);border:0;margin:1.4rem 0}
+.links{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-block;padding:.6rem 1.1rem;border-radius:6px;font-weight:700;text-decoration:none;font-size:.98rem;border:1.5px solid var(--gold-hi);color:#fff}
+.btn.solid{background:var(--gold-hi);color:var(--navy)}
+.btn:hover{filter:brightness(1.08)}
+
+/* the process line */
+.lineblock{margin-top:2.6rem}
+.lineblock h2{font-size:1.25rem;color:#fff}
+.hint{color:var(--hero-muted);font-size:.95rem;margin:.35rem 0 1.2rem}
+.line{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.line li{position:relative}
+.line li + li::before{content:"";position:absolute;top:13px;right:50%;width:100%;height:2px;background:var(--hero-line);z-index:0}
+.node{position:relative;z-index:1;display:block;width:100%;background:none;border:0;font:inherit;color:var(--hero-muted);padding:32px 4px 10px;text-align:center;line-height:1.25;font-size:.95rem}
+button.node{cursor:pointer;color:#DCE6F0;border-radius:8px}
+button.node:hover{color:#fff}
+.node::before{content:"";position:absolute;top:5px;left:50%;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--navy);border:2px solid #6C88A4}
+button.node::before{background:#DCE6F0;border-color:#DCE6F0}
+.node.is-ccp::before{background:#F0786D;border-color:#F0786D}
+.node[aria-pressed="true"]{color:#fff;font-weight:700}
+.node[aria-pressed="true"]::before{box-shadow:0 0 0 3px var(--navy),0 0 0 5px var(--gold-hi)}
+.tag{display:block;margin-top:2px;font-size:.78rem;font-weight:900;letter-spacing:.02em;color:#FF9A90}
+
+.panel{margin-top:1.2rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:1.2rem 1.3rem}
+.panel h3{font-size:1.3rem;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem}
+.panel .sub{color:var(--hero-muted);margin:.2rem 0 1rem;font-size:.97rem}
+.panel .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem 2rem}
+.panel dt{font-weight:700;color:var(--gold-hi);font-size:.92rem}
+.panel dd{margin:0 0 .1rem;color:#EAF0F6}
+.panel .hz{margin:0 0 .9rem;padding:0;list-style:none}
+.panel .hz li{padding:.6rem 0;border-top:1px solid rgba(255,255,255,.14)}
+.panel .hz li:first-child{border-top:0;padding-top:0}
+.panel .hz b{display:block}
+.badge{display:inline-block;font-family:var(--sans);font-size:.8rem;font-weight:900;padding:.1rem .5rem;border-radius:4px;background:var(--ccp-bg);color:var(--ccp);border:1px solid var(--ccp)}
+.panel .badge{background:#3B1E20;color:#FF9A90;border-color:#FF9A90}
+
+/* sections */
+main section.block{padding:3.4rem 0 .5rem}
+h2.sec{font-size:clamp(1.7rem,4.4vw,2.2rem);margin-bottom:1.3rem;padding-top:.8rem;border-top:3px solid var(--gold);display:inline-block;padding-right:2.2rem}
+.two{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:2.5rem}
+.two p{max-width:64ch}
+.facts{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.2rem 1.3rem;align-self:start}
+.facts h3{font-size:1.05rem;margin-bottom:.2rem}
+.facts p{color:var(--muted);margin:0 0 1rem;font-size:.97rem}
+.facts p:last-child{margin-bottom:0}
+.facts b{color:var(--text)}
+
+.intro{max-width:66ch;color:var(--muted)}
+.project{padding:2.2rem 0;border-top:1px solid var(--line)}
+.project:first-of-type{border-top:0}
+.pno{color:var(--muted);font-size:.92rem;margin:0 0 .25rem;font-weight:700}
+.project h3{font-size:clamp(1.35rem,3.6vw,1.75rem);margin-bottom:.6rem}
+.project .lead{max-width:66ch}
+.project h4{font-family:var(--sans);font-weight:900;font-size:1.02rem;margin:1.7rem 0 .55rem}
+.scope{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;margin:.3rem 0 0;padding:0}
+.scope li{border:1px solid var(--line);background:var(--surface);border-radius:4px;padding:.15rem .6rem;font-size:.93rem}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:540px;font-size:.96rem}
+th,td{text-align:left;vertical-align:top;padding:.65rem .85rem;border-bottom:1px solid var(--line)}
+th{background:var(--surface-2);font-weight:900;font-size:.92rem}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700}
+.note{color:var(--muted);font-size:.93rem;margin:.7rem 0 0;max-width:70ch}
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.cols3 > div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem}
+.cols3 b{display:block;margin-bottom:.15rem}
+.cols3 span{color:var(--muted);font-size:.95rem}
+.flow{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.55rem 1.4rem}
+.flow li{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:.45rem .8rem;font-weight:700;font-size:.95rem}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-1.05rem;top:50%;width:.7rem;height:.7rem;margin-top:-.35rem;border-top:2px solid var(--gold);border-right:2px solid var(--gold);transform:rotate(45deg) scale(.8)}
+.bul{margin:.4rem 0 0;padding-left:1.15rem;max-width:66ch}
+.bul li{margin:.2rem 0}
+.tw + .bul,.flow + .bul{margin-top:.9rem}
+.records{color:var(--muted);max-width:66ch;margin:.9rem 0 0;font-size:.97rem}
+
+/* skills + credentials */
+.rows{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.rows > div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:1rem;padding:.85rem 1.2rem;border-top:1px solid var(--line)}
+.rows > div:first-child{border-top:0}
+.rows dt{font-weight:900}
+.rows dd{margin:0}
+.rows .muted{color:var(--muted)}
+.subsec{font-size:1.3rem;margin:2rem 0 .8rem}
+.rows .bul{margin-top:.2rem}
+.rows .bul li{margin:.1rem 0}
+
+/* contact */
+.contact{margin:3.4rem 0 0;padding:2.6rem 0 3rem;background:linear-gradient(165deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff}
+.contact h2{font-size:clamp(1.6rem,4.4vw,2.1rem);margin-bottom:.6rem}
+.contact p{color:#DCE6F0;max-width:60ch}
+footer{background:var(--navy);color:var(--hero-muted);font-size:.9rem;padding:1.2rem 0}
+footer p{margin:0;max-width:80ch}
+
+.print-only{display:none}
+
+/* small screens: the process line runs vertically */
+@media (max-width:640px){
+  body{font-size:16.5px}
+  .hero{padding:2.4rem 0 2.2rem}
+  .line{grid-template-columns:1fr}
+  .line li + li::before{top:-50%;bottom:auto;right:auto;left:15px;width:2px;height:100%}
+  .node{padding:13px 8px 13px 44px;text-align:left;min-height:48px;display:flex;align-items:center;gap:.6rem}
+  .node::before{top:50%;left:8px;margin:-8px 0 0}
+  .tag{display:inline-block;margin:0}
+  .panel .grid{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr;gap:1.6rem}
+  .cols3{grid-template-columns:1fr}
+  .rows > div{grid-template-columns:1fr;gap:.15rem}
+  .flow{gap:.55rem 1.3rem}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+
+/* print / PDF */
+@media print{
+  @page{size:A4;margin:12mm}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html{scroll-behavior:auto}
+  body{background:#fff;color:#18232F;font-size:10pt;line-height:1.5}
+  .wrap{padding:0}
+  .top,.hint,#panel,.no-print{display:none !important}
+  .print-only{display:block;margin-top:.6rem;color:#DCE6F0;font-size:10pt}
+  .contact .links{display:none}
+  .hero{border-radius:10px;padding:1.6rem 1.6rem 1.3rem}
+  .hero h1{font-size:34pt}
+  .lineblock{margin-top:1.4rem}
+  .lineblock h2{font-size:12pt}
+  .line li + li::before{top:13px}
+  main section.block{padding:1.6rem 0 0}
+  h2.sec{font-size:17pt;margin-bottom:.7rem}
+  h2,h3,h4,.pno{break-after:avoid}
+  .tw,.flow,.cols3,.facts,.rows > div,.panel{break-inside:avoid}
+  tr{break-inside:avoid}
+  .project{padding:.9rem 0}
+  .project h3{font-size:15pt;margin-bottom:.35rem}
+  .project h4{margin:1rem 0 .4rem}
+  table{font-size:9pt}
+  th,td{padding:.38rem .7rem}
+  .pno{font-size:8.5pt}
+  .project .lead{margin-bottom:.6rem}
+  .cols3 > div{padding:.6rem .8rem}
+  #projects{break-before:page}
+  .project:not(#p1),.keep{break-inside:avoid}
+  #skills .wrap,#credentials .wrap,#experience .wrap{break-inside:avoid}
+  .contact{margin-top:1.6rem;padding:1.4rem 1.6rem;border-radius:10px}
+  footer{background:none;color:#526173;padding:.8rem 0 0;border-top:1px solid #D3DCE5;margin-top:1rem}
+  a{color:inherit;text-decoration:none}
+  table{min-width:0}
+  .tw{overflow:visible}
+}
+</style>
+<style>
+.cs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.1rem;margin-top:1.6rem}
+.cs{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.2rem 1.3rem;display:flex;flex-direction:column}
+.cs h3{font-size:1.2rem;margin:.1rem 0 .6rem}
+.cs p{font-size:.97rem}
+.cs .meta{color:var(--muted);font-size:.88rem;margin-top:auto}
+.cs .dl{align-self:flex-start;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:.5rem 1rem;border-radius:6px;font-size:.95rem}
+.cs .dl:hover{background:var(--navy-2)}
+.cs .btns{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.7rem}
+.cs .dl.alt{background:transparent;color:var(--navy);border:2px solid var(--navy);padding:.4rem .9rem}
+.cs .dl.alt:hover{background:var(--surface-2)}
+@media (prefers-color-scheme: dark){.cs .dl{background:var(--gold-hi);color:#0E2236}.cs .dl.alt{background:transparent;color:var(--gold-hi);border-color:var(--gold-hi)}}
+.pno{font-weight:900;color:var(--gold);font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem}
+.pagehead{background:linear-gradient(165deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:3rem 0 2.4rem}
+.pagehead h1{font-size:clamp(2rem,6vw,3.2rem)}
+.pagehead p{color:var(--hero-muted);max-width:68ch;margin:1rem 0 0}
+.note{background:var(--surface-2);border-left:4px solid var(--gold);padding:.9rem 1.1rem;border-radius:6px;margin-top:1.4rem;font-size:.96rem}
+footer{padding:1.5rem 0;color:var(--muted);font-size:.92rem}
+</style>
+</head><body>
+<header class="top"><div class="wrap bar"><a class="brand" href="index.html">Ahmed Mostafa</a>
+<nav aria-label="Pages"><a href="index.html">Portfolio</a><a href="index.html#contact">Contact</a><a href="Ahmed_Mostafa_Mahmoud_CV.pdf">Download CV</a></nav></div></header>
+<main>
+<section class="pagehead"><div class="wrap"><h1>Training case studies</h1>
+<p>Thirteen self-study documents on one virtual poultry and processed meat plant, Nile Valley Poultry and Meat Products. The same CCPs and batch codes run through all of them.</p></div></section>
+<section class="block"><div class="wrap">
+<p class="note"><b>Please note:</b> these are learning exercises. The company, people, flocks and every figure are invented. They are not records of work done in a real factory.</p>
+<div class="cs-grid">
+<article class="cs"><p class="pno">File 1 of 13</p><h3>ISO 22000:2018 Food Safety Management System</h3><p>Scope, process flow and the management system clause by clause, with policy, objectives and records for a virtual poultry and processed meat plant.</p><p class="meta">PDF, 29 pages, 385 KB</p><div class="btns"><a class="dl" href="case-studies/File1_ISO22000_Poultry_Meat_Plant.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File1_ISO22000_Poultry_Meat_Plant.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 2 of 13</p><h3>HACCP plans for poultry and processed meat</h3><p>Three full plans following the Codex 12 steps: hazard analysis, CCPs, critical limits, monitoring, corrective action and verification.</p><p class="meta">PDF, 21 pages, 310 KB</p><div class="btns"><a class="dl" href="case-studies/File2_HACCP_Plans.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File2_HACCP_Plans.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 3 of 13</p><h3>GMP and GHP prerequisite programs</h3><p>Plant zoning, personnel hygiene, cleaning and sanitation, pest control and facility control for the whole plant.</p><p class="meta">PDF, 19 pages, 280 KB</p><div class="btns"><a class="dl" href="case-studies/File3_GMP_GHP_Programs.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File3_GMP_GHP_Programs.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 4 of 13</p><h3>FSSC 22000 V7 certification readiness</h3><p>Gap analysis against the additional requirements and a mock certification audit.</p><p class="meta">PDF, 20 pages, 292 KB</p><div class="btns"><a class="dl" href="case-studies/File4_FSSC22000_Readiness.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File4_FSSC22000_Readiness.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 5 of 13</p><h3>ISO 9001:2026 Quality Management System</h3><p>Process approach, quality planning, control and improvement, and how quality differs from food safety.</p><p class="meta">PDF, 18 pages, 303 KB</p><div class="btns"><a class="dl" href="case-studies/File5_ISO9001_QMS.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File5_ISO9001_QMS.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 6 of 13</p><h3>TQM and the seven quality tools</h3><p>Statistical process control, Pareto, cause and effect analysis and continual improvement.</p><p class="meta">PDF, 20 pages, 700 KB</p><div class="btns"><a class="dl" href="case-studies/File6_TQM_Quality_Tools.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File6_TQM_Quality_Tools.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 7 of 13</p><h3>Egyptian food safety law and NFSA compliance</h3><p>Law No. 1 of 2017 and Decree 412 of 2019, and what they mean for a poultry and meat plant.</p><p class="meta">PDF, 18 pages, 291 KB</p><div class="btns"><a class="dl" href="case-studies/File7_NFSA_Law_Compliance.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File7_NFSA_Law_Compliance.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 8 of 13</p><h3>Traceability and mock recall</h3><p>Batch identity, carcass and offal traceability, mass balance and a timed recall exercise.</p><p class="meta">PDF, 21 pages, 419 KB</p><div class="btns"><a class="dl" href="case-studies/File8_Traceability_Mock_Recall.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File8_Traceability_Mock_Recall.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 9 of 13</p><h3>Food defence and food fraud</h3><p>Threat assessment (TACCP), vulnerability assessment (VACCP) and the resulting plans.</p><p class="meta">PDF, 16 pages, 300 KB</p><div class="btns"><a class="dl" href="case-studies/File9_Food_Defence_Fraud.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File9_Food_Defence_Fraud.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 10 of 13</p><h3>Internal auditor practice</h3><p>Audit programme, checklists, interview and sampling technique, and a complete internal audit report.</p><p class="meta">PDF, 14 pages, 244 KB</p><div class="btns"><a class="dl" href="case-studies/File10_Internal_Auditor.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File10_Internal_Auditor.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 11 of 13</p><h3>Laboratory and QC practice</h3><p>Sampling plans, microbiological and chemical testing, certificate of analysis review and a shelf-life study.</p><p class="meta">PDF, 13 pages, 241 KB</p><div class="btns"><a class="dl" href="case-studies/File11_Lab_QC_Practice.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File11_Lab_QC_Practice.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 12 of 13</p><h3>Allergen management</h3><p>Coating line control, cleaning validation, label control and allergen verification.</p><p class="meta">PDF, 12 pages, 215 KB</p><div class="btns"><a class="dl" href="case-studies/File12_Allergen_Management.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File12_Allergen_Management.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 13 of 13</p><h3>Supplier and farm approval</h3><p>Risk-based approval, scoring, supplier audit practice and a mock farm audit.</p><p class="meta">PDF, 18 pages, 261 KB</p><div class="btns"><a class="dl" href="case-studies/File13_Supplier_Farm_Approval.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File13_Supplier_Farm_Approval.pdf" download>Download PDF</a></div></article>
+</div></div></section>
+</main>
+<footer><div class="wrap"><p>Prepared by Ahmed Mostafa Mahmoud, B.Sc. Agriculture, Minya University, 2026. Edition November 2026, draft 1.</p></div></footer>
+</body></html>
