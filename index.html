@@ -135,6 +135,23 @@ td:first-child{font-weight:700}
 .tw + .bul,.flow + .bul{margin-top:.9rem}
 .records{color:var(--muted);max-width:66ch;margin:.9rem 0 0;font-size:.97rem}
 
+
+/* case study cards */
+.cs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.1rem;margin-top:1.6rem}
+.cs{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.2rem 1.3rem;display:flex;flex-direction:column}
+.cs h3{font-size:1.2rem;margin:.1rem 0 .6rem}
+.cs p{font-size:.97rem}
+.cs .meta{color:var(--muted);font-size:.88rem;margin-top:auto}
+.cs .btns{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.7rem}
+.cs .dl{align-self:flex-start;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:.5rem 1rem;border-radius:6px;font-size:.95rem}
+.cs .dl:hover{background:var(--navy-2)}
+.cs .dl.alt{background:transparent;color:var(--navy);border:2px solid var(--navy);padding:.4rem .9rem}
+.cs .dl.alt:hover{background:var(--surface-2)}
+@media (prefers-color-scheme: dark){.cs .dl{background:var(--gold-hi);color:#0E2236}.cs .dl.alt{background:transparent;color:var(--gold-hi);border-color:var(--gold-hi)}}
+.cs .pno{font-weight:900;color:var(--gold);font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.2rem}
+.csnote{background:var(--surface-2);border-left:4px solid var(--gold);padding:.9rem 1.1rem;border-radius:6px;margin-top:1.4rem;font-size:.96rem;max-width:100%}
+@media print{.cs .btns{display:none}.cs{break-inside:avoid}}
+
 /* skills + credentials */
 .rows{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:10px}
 .rows > div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:1rem;padding:.85rem 1.2rem;border-top:1px solid var(--line)}
@@ -218,8 +235,7 @@ footer p{margin:0;max-width:80ch}
     <a class="brand" href="#top">Ahmed Mostafa</a>
     <nav aria-label="Sections">
       <a href="#profile">Profile</a>
-      <a href="#projects">Projects</a>
-      <a href="case-studies.html">Case studies</a>
+      <a href="#projects">Case studies</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#credentials">Credentials</a>
@@ -270,190 +286,23 @@ footer p{margin:0;max-width:80ch}
 <section class="block" id="projects" aria-labelledby="h-projects">
   <div class="wrap">
     <h2 class="sec" id="h-projects">Case-study projects</h2>
-    <p class="intro">Each project turns a quality or food safety requirement into controls, records, analysis and improvement actions. They are training case studies, not records from a working plant. <a href="case-studies.html">See the 13 downloadable case studies on a virtual poultry and meat plant.</a></p>
-
-    <!-- Project 1 -->
-    <article class="project" id="p1">
-      <p class="pno">Project 1</p>
-      <h3>Tomato sauce HACCP and ISO 22000 case study</h3>
-      <p class="lead">A food safety system for a tomato sauce manufacturing and packaging process, built on HACCP and ISO 22000 principles. It covers hazards, preventive controls, critical control points, monitoring, corrective action and verification.</p>
-      <ul class="scope" aria-label="Scope">
-        <li>Raw material receiving</li><li>Processing and preparation</li><li>Cooking and heat treatment</li><li>Filling</li><li>Packaging</li><li>Finished product storage</li>
-      </ul>
-
-      <div class="keep">
-      <h4>Hazard analysis</h4>
-      <div class="tw"><table>
-        <thead><tr><th>Process step</th><th>Hazard</th><th>Type</th><th>Control measure</th><th>Significant</th></tr></thead>
-        <tbody>
-          <tr><td>Receiving</td><td>Pathogenic microorganisms</td><td>Biological</td><td>Approved suppliers and inspection</td><td>Yes</td></tr>
-          <tr><td>Receiving</td><td>Pesticide residues</td><td>Chemical</td><td>Supplier control and specifications</td><td>Yes</td></tr>
-          <tr><td>Processing</td><td>Survival of microorganisms</td><td>Biological</td><td>Controlled heat treatment</td><td>Yes</td></tr>
-          <tr><td>Filling</td><td>Recontamination</td><td>Biological</td><td>Hygienic filling conditions</td><td>Yes</td></tr>
-          <tr><td>Packaging</td><td>Foreign body</td><td>Physical</td><td>Packaging inspection</td><td>Yes</td></tr>
-        </tbody>
-      </table></div>
-      <ul class="bul">
-        <li>Identify biological, chemical and physical hazards at each step.</li>
-        <li>Assess significance with the selected risk assessment approach.</li>
-        <li>Define preventive or control measures.</li>
-        <li>Document the rationale for hazards that need further control.</li>
-      </ul>
-      </div>
-
-      <div class="keep">
-      <h4>Critical control points</h4>
-      <p class="lead">A documented decision process decides whether a step needs control as a CCP. It weighs the hazard, the control measure, how likely the hazard is, and whether control is essential at that step.</p>
-      <div class="tw"><table>
-        <thead><tr><th>CCP</th><th>Hazard</th><th>Critical limit</th><th>Monitoring</th><th>Corrective action</th></tr></thead>
-        <tbody>
-          <tr><td>Cooking <span class="badge">CCP</span></td><td>Microbial survival</td><td>Validated time/temperature limit defined for the process</td><td>Temperature and time</td><td>Stop the process and evaluate the product</td></tr>
-          <tr><td>Filling <span class="badge">CCP</span></td><td>Recontamination</td><td>Validated hygienic limits defined for the filling operation</td><td>Periodic monitoring</td><td>Correct the condition and assess the product</td></tr>
-        </tbody>
-      </table></div>
-      <p class="note">No numeric limits are stated here. They must be validated against the product, the process, legal requirements, scientific references and site-specific data.</p>
-      </div>
-
-      <div class="keep">
-      <h4>Control cycle</h4>
-      <ol class="flow" aria-label="Control cycle">
-        <li>Define critical limit</li><li>Monitor and record</li><li>Identify deviation</li><li>Correct and control product</li><li>Verify</li>
-      </ol>
-      <div class="cols3" style="margin-top:1rem">
-        <div><b>Monitoring</b><span>What is measured, how, when and by whom. Records give objective evidence of control.</span></div>
-        <div><b>Corrective action</b><span>Identify the deviation, control the affected product, restore the process, find the cause and document what was done.</span></div>
-        <div><b>Verification</b><span>Review records, confirm monitoring took place, check equipment calibration where it applies, and review how well the controls work.</span></div>
-      </div>
-      </div>
-
-      <div class="keep">
-      <h4>Traceability</h4>
-      <ol class="flow" aria-label="Traceability flow">
-        <li>Supplier</li><li>Raw material lot</li><li>Production date</li><li>Production batch</li><li>Packaging</li><li>Finished product</li><li>Customer</li>
-      </ol>
-      <ul class="bul">
-        <li>Track raw materials and finished products by lot.</li>
-        <li>Link production records to specific lots and batches.</li>
-        <li>Support complaint and nonconformity investigations, and targeted withdrawal or recall.</li>
-        <li>Cover one step back and one step forward, with defined records and responsibilities.</li>
-      </ul>
-      </div>
-    </article>
-
-    <!-- Project 2 -->
-    <article class="project" id="p2">
-      <p class="pno">Project 2</p>
-      <h3>ISO 22000:2018 food safety management system</h3>
-      <p class="lead">A case study organized around the structure of ISO 22000:2018, from organizational context through to improvement.</p>
-      <div class="tw"><table>
-        <thead><tr><th>Clause</th><th>Focus</th><th>Applied to</th></tr></thead>
-        <tbody>
-          <tr><td>4 Context of the organization</td><td>Internal and external issues</td><td>Organizational context and interested parties</td></tr>
-          <tr><td>5 Leadership</td><td>Commitment and roles</td><td>Food safety policy and responsibilities</td></tr>
-          <tr><td>6 Planning</td><td>Risk and objectives</td><td>Risks and opportunities, objectives and planning</td></tr>
-          <tr><td>7 Support</td><td>Resources and information</td><td>Resources and documented information</td></tr>
-          <tr><td>8 Operation</td><td>Operational control</td><td>PRPs and hazard control</td></tr>
-          <tr><td>9 Performance evaluation</td><td>Checking results</td><td>Monitoring, analysis and verification</td></tr>
-          <tr><td>10 Improvement</td><td>Acting on findings</td><td>Continual improvement of the system</td></tr>
-        </tbody>
-      </table></div>
-    </article>
-
-    <!-- Project 3 -->
-    <article class="project" id="p3">
-      <p class="pno">Project 3</p>
-      <h3>PRPs cleaning and sanitation system</h3>
-      <p class="lead">A structured sanitation program that sets cleaning methods, chemical controls, frequencies, responsibilities and verification, to keep hygienic conditions under control.</p>
-      <div class="tw"><table>
-        <thead><tr><th>Item</th><th>Requirement</th></tr></thead>
-        <tbody>
-          <tr><td>Area</td><td>Processing area</td></tr>
-          <tr><td>Cleaning type</td><td>Wet cleaning</td></tr>
-          <tr><td>Chemical</td><td>Approved detergent and disinfectant</td></tr>
-          <tr><td>Concentration</td><td>Defined specification</td></tr>
-          <tr><td>Frequency</td><td>Daily, or as defined by risk</td></tr>
-          <tr><td>Performed by</td><td>Sanitation operator</td></tr>
-          <tr><td>Checked by</td><td>Quality or supervisor</td></tr>
-          <tr><td>Verification</td><td>Inspection, and swab testing where applicable</td></tr>
-        </tbody>
-      </table></div>
-    </article>
-
-    <!-- Project 4 -->
-    <article class="project" id="p4">
-      <p class="pno">Project 4</p>
-      <h3>ISO 9001:2015 quality management system</h3>
-      <p class="lead">Practical application of ISO 9001:2015 requirements across clauses 4 to 10.</p>
-      <div class="tw"><table>
-        <thead><tr><th>Clause</th><th>Focus</th><th>Practical example</th></tr></thead>
-        <tbody>
-          <tr><td>4</td><td>Context of the organization</td><td>Identify internal and external issues and interested parties.</td></tr>
-          <tr><td>5</td><td>Leadership</td><td>Quality policy, roles, responsibilities and leadership commitment.</td></tr>
-          <tr><td>6</td><td>Planning</td><td>Risks, opportunities, objectives and planned changes.</td></tr>
-          <tr><td>7</td><td>Support</td><td>Resources, competence, awareness, communication and documented information.</td></tr>
-          <tr><td>8</td><td>Operation</td><td>Operational planning, product and service requirements, process controls.</td></tr>
-          <tr><td>9</td><td>Performance evaluation</td><td>Monitoring, measurement, internal audit and management review.</td></tr>
-          <tr><td>10</td><td>Improvement</td><td>Nonconformity, corrective action and continual improvement.</td></tr>
-        </tbody>
-      </table></div>
-      <p class="records">Records produced: risk assessment, quality objectives, document control, internal audit, nonconformity, CAPA and continual improvement.</p>
-    </article>
-
-    <!-- Project 5 -->
-    <article class="project" id="p5">
-      <p class="pno">Project 5</p>
-      <h3>TQM quality improvement case study</h3>
-      <p class="lead">A structured problem-solving path that links TQM principles to data analysis, root-cause investigation, corrective action and process control.</p>
-      <div class="tw"><table>
-        <thead><tr><th>Step</th><th>Tool or stage</th><th>Purpose</th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td>Problem</td><td>Define the quality problem and its impact.</td></tr>
-          <tr><td>2</td><td>Data collection</td><td>Collect relevant process or defect data.</td></tr>
-          <tr><td>3</td><td>Pareto analysis</td><td>Find the most significant categories.</td></tr>
-          <tr><td>4</td><td>Fishbone analysis</td><td>Explore potential root causes.</td></tr>
-          <tr><td>5</td><td>Root cause</td><td>Confirm the causes that need action.</td></tr>
-          <tr><td>6</td><td>Corrective action</td><td>Implement actions and assign responsibility.</td></tr>
-          <tr><td>7</td><td>Control chart</td><td>Monitor process stability over time.</td></tr>
-          <tr><td>8</td><td>Results</td><td>Evaluate effectiveness and sustain the improvement.</td></tr>
-        </tbody>
-      </table></div>
-    </article>
-
-    <!-- Project 6 -->
-    <article class="project" id="p6">
-      <p class="pno">Project 6</p>
-      <h3>Emergency preparedness plan</h3>
-      <p class="lead">A response framework for events that can affect people, product or process control. It protects people, prevents contamination, controls affected product and restores safe operation.</p>
-      <div class="tw"><table>
-        <thead><tr><th>Emergency</th><th>Immediate action</th><th>Product control</th><th>Corrective action</th></tr></thead>
-        <tbody>
-          <tr><td>Fire</td><td>Evacuate and secure the area</td><td>Isolate affected product</td><td>Investigation</td></tr>
-          <tr><td>Power failure</td><td>Stop affected operations</td><td>Identify affected batches</td><td>Restore and verify</td></tr>
-          <tr><td>Chemical spill</td><td>Isolate the area</td><td>Prevent contamination</td><td>Clean and inspect</td></tr>
-          <tr><td>Foreign body</td><td>Stop the process</td><td>Hold affected product</td><td>Root cause analysis</td></tr>
-        </tbody>
-      </table></div>
-      <p class="note">Also planned for: cooling failure, gas or fuel leakage, equipment breakdown, pest infestation, flooding or drainage failure, glass breakage, utilities failure, suspected sabotage, and monitoring or control failure.</p>
-    </article>
-
-    <!-- Project 7 -->
-    <article class="project" id="p7">
-      <p class="pno">Project 7</p>
-      <h3>NFSA food safety requirements case study</h3>
-      <p class="lead">A self-study case study applying Egypt's National Food Safety Authority (NFSA) requirements, under Law No. 1 of 2017 and its Executive Regulations (Prime Ministerial Decree No. 412 of 2019), to the same tomato sauce manufacturing and packaging process used in Projects 1 and 3.</p>
-      <div class="tw"><table>
-        <thead><tr><th>NFSA focus area</th><th>Requirement</th><th>Applied to the line</th></tr></thead>
-        <tbody>
-          <tr><td>Establishment licensing</td><td>No food establishment may operate without an NFSA license</td><td>Confirm the facility holds a valid NFSA food establishment license before production</td></tr>
-          <tr><td>National standards</td><td>NFSA sets mandatory food safety standards, aligned with EOS requirements</td><td>Check product and process standards against NFSA and EOS national standards</td></tr>
-          <tr><td>Traceability</td><td>Food traceability requirements (NFSA Decision 16/2022)</td><td>Apply through the lot-based traceability system in Project 1</td></tr>
-          <tr><td>Food contact materials</td><td>Technical rules for food contact materials and articles (NFSA Decision 17/2022)</td><td>Confirm packaging and filling equipment materials meet requirements</td></tr>
-          <tr><td>Hygiene and pest control</td><td>General hygiene and pest control requirements for food establishments</td><td>Build into the PRPs cleaning and sanitation system in Project 3</td></tr>
-          <tr><td>Packaging and labeling</td><td>Packaging, labeling and instructional requirements</td><td>Check label content and claims before release</td></tr>
-        </tbody>
-      </table></div>
-      <p class="note">This case study maps NFSA's regulatory framework onto the same process used elsewhere in this portfolio, to show how a local regulator's requirements sit alongside HACCP, ISO 22000 and the PRPs.</p>
-    </article>
+    <p class="intro">Thirteen self-study case studies on one virtual poultry and processed meat plant, Nile Valley Poultry and Meat Products. The same CCPs and batch codes run through all of them. Each file turns a quality or food safety requirement into controls, records, analysis and improvement actions.</p>
+    <p class="csnote"><b>Please note:</b> these are learning exercises. The company, people, flocks and every figure are invented. They are not records of work done in a real factory.</p>
+    <div class="cs-grid">
+<article class="cs"><p class="pno">File 1 of 13</p><h3>ISO 22000:2018 Food Safety Management System</h3><p>Scope, process flow and the management system clause by clause, with policy, objectives and records for a virtual poultry and processed meat plant.</p><p class="meta">PDF, 29 pages, 385 KB</p><div class="btns"><a class="dl" href="case-studies/File1_ISO22000_Poultry_Meat_Plant.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File1_ISO22000_Poultry_Meat_Plant.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 2 of 13</p><h3>HACCP plans for poultry and processed meat</h3><p>Three full plans following the Codex 12 steps: hazard analysis, CCPs, critical limits, monitoring, corrective action and verification.</p><p class="meta">PDF, 21 pages, 310 KB</p><div class="btns"><a class="dl" href="case-studies/File2_HACCP_Plans.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File2_HACCP_Plans.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 3 of 13</p><h3>GMP and GHP prerequisite programs</h3><p>Plant zoning, personnel hygiene, cleaning and sanitation, pest control and facility control for the whole plant.</p><p class="meta">PDF, 19 pages, 280 KB</p><div class="btns"><a class="dl" href="case-studies/File3_GMP_GHP_Programs.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File3_GMP_GHP_Programs.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 4 of 13</p><h3>FSSC 22000 V7 certification readiness</h3><p>Gap analysis against the additional requirements and a mock certification audit.</p><p class="meta">PDF, 20 pages, 292 KB</p><div class="btns"><a class="dl" href="case-studies/File4_FSSC22000_Readiness.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File4_FSSC22000_Readiness.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 5 of 13</p><h3>ISO 9001:2026 Quality Management System</h3><p>Process approach, quality planning, control and improvement, and how quality differs from food safety.</p><p class="meta">PDF, 18 pages, 303 KB</p><div class="btns"><a class="dl" href="case-studies/File5_ISO9001_QMS.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File5_ISO9001_QMS.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 6 of 13</p><h3>TQM and the seven quality tools</h3><p>Statistical process control, Pareto, cause and effect analysis and continual improvement.</p><p class="meta">PDF, 20 pages, 700 KB</p><div class="btns"><a class="dl" href="case-studies/File6_TQM_Quality_Tools.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File6_TQM_Quality_Tools.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 7 of 13</p><h3>Egyptian food safety law and NFSA compliance</h3><p>Law No. 1 of 2017 and Decree 412 of 2019, and what they mean for a poultry and meat plant.</p><p class="meta">PDF, 18 pages, 291 KB</p><div class="btns"><a class="dl" href="case-studies/File7_NFSA_Law_Compliance.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File7_NFSA_Law_Compliance.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 8 of 13</p><h3>Traceability and mock recall</h3><p>Batch identity, carcass and offal traceability, mass balance and a timed recall exercise.</p><p class="meta">PDF, 21 pages, 419 KB</p><div class="btns"><a class="dl" href="case-studies/File8_Traceability_Mock_Recall.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File8_Traceability_Mock_Recall.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 9 of 13</p><h3>Food defence and food fraud</h3><p>Threat assessment (TACCP), vulnerability assessment (VACCP) and the resulting plans.</p><p class="meta">PDF, 16 pages, 300 KB</p><div class="btns"><a class="dl" href="case-studies/File9_Food_Defence_Fraud.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File9_Food_Defence_Fraud.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 10 of 13</p><h3>Internal auditor practice</h3><p>Audit programme, checklists, interview and sampling technique, and a complete internal audit report.</p><p class="meta">PDF, 14 pages, 244 KB</p><div class="btns"><a class="dl" href="case-studies/File10_Internal_Auditor.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File10_Internal_Auditor.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 11 of 13</p><h3>Laboratory and QC practice</h3><p>Sampling plans, microbiological and chemical testing, certificate of analysis review and a shelf-life study.</p><p class="meta">PDF, 13 pages, 241 KB</p><div class="btns"><a class="dl" href="case-studies/File11_Lab_QC_Practice.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File11_Lab_QC_Practice.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 12 of 13</p><h3>Allergen management</h3><p>Coating line control, cleaning validation, label control and allergen verification.</p><p class="meta">PDF, 12 pages, 215 KB</p><div class="btns"><a class="dl" href="case-studies/File12_Allergen_Management.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File12_Allergen_Management.pdf" download>Download PDF</a></div></article>
+<article class="cs"><p class="pno">File 13 of 13</p><h3>Supplier and farm approval</h3><p>Risk-based approval, scoring, supplier audit practice and a mock farm audit.</p><p class="meta">PDF, 18 pages, 261 KB</p><div class="btns"><a class="dl" href="case-studies/File13_Supplier_Farm_Approval.pdf" target="_blank" rel="noopener">View</a><a class="dl alt" href="case-studies/File13_Supplier_Farm_Approval.pdf" download>Download PDF</a></div></article>
+</div>
   </div>
 </section>
 
@@ -531,11 +380,11 @@ footer p{margin:0;max-width:80ch}
       <div><dt>FSSC 22000 V7</dt><dd>Food Safety Management System</dd></div>
       <div><dt>GMP &amp; GHP</dt><dd>Good Manufacturing and Hygiene Practices</dd></div>
       <div><dt>ISO 9001:2026</dt><dd>Quality Management System</dd></div>
-      <div><dt>NFSA food safety requirements</dt><dd>Self-study of Egypt's National Food Safety Authority requirements, with a practical case study (Project 7)</dd></div>
+      <div><dt>NFSA food safety requirements</dt><dd>Self-study of Egypt's National Food Safety Authority requirements, with a practical case study (file 7 above)</dd></div>
     </dl>
     <h3 class="subsec">Applied learning</h3>
     <dl class="rows">
-      <div><dt>ISO 9001:2015</dt><dd>Studied through an applied project (Project 4)<br><span class="muted">No formal certificate</span></dd></div>
+      <div><dt>ISO 9001:2015</dt><dd>Studied through an applied project (file 5 above)<br><span class="muted">No formal certificate</span></dd></div>
     </dl>
   </div>
 </section>
